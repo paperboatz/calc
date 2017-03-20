@@ -1,18 +1,13 @@
 // ======== Step ==========
 
-// Created function to wrap so a user can enter one command to get an ouptut
-// console.log to test 
 
-// for typeTotal, I considered making if/else conditionals
-// the reason I chose to use if statements was because
-// in the example we were given "drugs" which could/could not fit into pharma type
-// in my opinion better in the UI, a user would be given set options
-// so they are forced to choose between these 4 categories
-// or else we would have to make a list of what each type words could fit under type category === confusion
+// export module so it can be executed via command line with node
+// in terminal: node -e "require('./app').total(1299.99, 3, \"food\")"
 
-function total(input, numPersons, type){
+module.exports.total = function(input, numPersons, type){
 
 	var baseMarkup = input * 1.05;
+	var endTotal = '';
 
 	function personTotal(numPersons, baseMarkup){
 	  var personPercent = numPersons * 0.012;
@@ -36,9 +31,8 @@ function total(input, numPersons, type){
 	  }
     }
 
-    return baseMarkup + personTotal(numPersons, baseMarkup) + typeTotal(type, baseMarkup);
+  	endTotal = baseMarkup + personTotal(numPersons, baseMarkup) + typeTotal(type, baseMarkup);
+    console.log(endTotal); 
 }
-
-console.log(total(1299.99, 3, 'food'));
 
 
