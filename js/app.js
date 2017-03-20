@@ -1,37 +1,39 @@
-// 1) Steps involved
+// ======== Step 2 ==========
+// substitute hardcode with changable arguments
+// create simple functions 
 
-// I deconstruct the problem
-// pseudo code the steps involved
+// Debug in console.log to check why I am not getting the same as my hardcode
+// Noticed I was putting wrong argumetns in my function
 
-// 1) Need a input for user. The base price
-// 2) flat markup of 5%. Base price * 5%;
-// 3) all other markups on top... soo
-// 4) Figure out person mark up
-// 5) figure out type of materials, if / else statments
-// 6) add them up for total output 
-// 7) See if user wants to add another job
-// 8) have a visual output for customer with a breakdown of costs
-
-// 2) Hard code to retrieve correct values
-
-let input = 1299.99;
-
+const input = 5432.00;
 let baseMarkup = input * 1.05;
+let output = '';
 
-let personPercent = 3 * 0.012;
+function personTotal(numPersons, baseMarkup){
+	let personPercent = numPersons * 0.012;
+	let personTotal = baseMarkup * personPercent; 
 
-let personAdd = baseMarkup * personPercent;
+	return personTotal;
+}
 
-let food = baseMarkup * 0.13;
+function typeTotal(type, baseMarkup){
+  if (type === 'pharmaceuticals'){
+	return baseMarkup * 0.075;
+  }
+  if (type === 'food'){
+	return baseMarkup * 0.13;
+  }
+  if (type === 'electronics'){
+	return baseMarkup * 0.02;
+  }
+  if (type === 'else') {
+	return baseMarkup;
+  }
+}
 
-let output = food + baseMarkup + personAdd;
+output = baseMarkup + personTotal(1, baseMarkup) + typeTotal('pharmaceuticals', baseMarkup);
 
-console.log(output); // output was correct! 
-
-
-
-
-
+console.log(output); // great it works 
 
 
 
