@@ -6,9 +6,9 @@ module.exports.total = function(input, numPersons, type){
   var baseMarkup = inputStripped * 1.05;
 
   function personTotal(numPersons, baseMarkup){
-	var personPercent = numPersons * 0.012;
-	var personTotal = baseMarkup * personPercent; 
-	return personTotal;
+	  var personPercent = numPersons * 0.012;
+	  var personTotal = baseMarkup * personPercent; 
+	  return personTotal;
   }
 
   function typeTotal(type, baseMarkup){
