@@ -29,7 +29,7 @@ Usually dollars are rounded up. I initially implemented this but when rechecking
 In the example, the price input and output are formatted with dollar signs and commas. I made sure the calculator accounts for this. <br> 
 
 ### Validation
-If there was a UI input form, I would create validation to catch symbols that might break the calculator. Also, all examples were in lowercase strings so I did not account for capitalization for type<br> 
+If there was a UI input form, I would create validation to catch symbols that might break the calculator. Also, all examples were in lowercase strings so I did not account for capitalization.<br> 
 
 ### Additional inputs 
-It wasn't specified if user wanted to add more materials or more jobs. Since, each of the examples given had one base price, person input and type my calculator reflects for those arguments. 
+It wasn't specified if user wanted to add more materials or more jobs. Since, each of the examples given had one base price, person input and type, my calculator reflects for those arguments.
